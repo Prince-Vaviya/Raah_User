@@ -570,7 +570,7 @@ function OTPScreen() {
           <p style={{ fontSize: 15, color: "#5F6678", margin: 0 }}>We sent a 6-digit OTP to <strong style={{ color: "#1A1D29" }}>+91 98765 43210</strong></p>
         </div>
 
-        <div style={{ display: "flex", gap: 10, marginBottom: 28 }}>
+        <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 28 }}>
           {otp.map((v, i) => (
             <input
               key={i}
@@ -579,7 +579,7 @@ function OTPScreen() {
               onChange={e => handleInput(i, e.target.value)}
               maxLength={1}
               type="tel"
-              style={{ flex: 1, height: 62, textAlign: "center", fontSize: 24, fontWeight: 700, fontFamily: F, color: "#1A1D29", borderRadius: 14, border: v ? "2px solid #5B6CFF" : "1.5px solid #E8ECF5", background: "#fff", outline: "none" }}
+              style={{ width: 48, height: 48, textAlign: "center", fontSize: 20, fontWeight: 600, fontFamily: F, color: "#1A1D29", borderRadius: 12, border: v ? "2px solid #5B6CFF" : "1.5px solid #E8ECF5", background: "#fff", outline: "none", boxSizing: "border-box" }}
             />
           ))}
         </div>
